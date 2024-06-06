@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    background-color: white;
+
+    padding: 10px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    color: black;
+}
+
+.star-half {
+    color: black;
+    position: relative;
+}
+
+.star-half::before {
+    content: "★";
+    color: lightgray;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+}
+
+.rating {
+    margin-left: 5px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 16px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button.add {
+    background-color:black;
+    color: white;
+}
+
+.button.buy {
+    background-color: white;
+    color: black;
+    border: 2px solid gray;
+}
+
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <div class="image-container">
+            <img src="Headphone.jpg" alt="Bluetooth Headphone" class="product-image">
+        </div>
+        <h2 class="product-title">Bluetooth Headphone</h2>
+        <div class="product-details">
+            <div class="product-rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star-half">★</span>
+                <span class="rating">4.5</span>
+            </div>
+            <button class="button add">ADD</button>
+        </div>
+        <div class="product-footer">
+            <div class="product-price">Rs. 3,000.00</div>
+            <button class="button buy">BUY</button>
+        </div>
+    </div>
+</body>
+</html>
