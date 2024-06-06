@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>frame</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .window {
+            display: flex;
+            width: 400px;
+            height: 200px;
+            border: 3px solid black;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .frame {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            border: 3px solid pink;
+            box-sizing: border-box;
+        }
+
+        .pane {
+            flex: 1;
+            border: 1px solid black;
+            background-color: lightblue;
+            box-sizing: border-box;
+        }
+
+        .pane + .pane {
+            border-top: none;
+        }
+
+        .frame + .frame {
+            border-left: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="window">
+            <div class="frame">
+                <div class="pane"></div>
+                <div class="pane"></div>
+            </div>
+            <div class="frame">
+                <div class="pane"></div>
+                <div class="pane"></div>
+            </div>
+        </div>
+      
+    </div>
+</body>
+</html>
+
